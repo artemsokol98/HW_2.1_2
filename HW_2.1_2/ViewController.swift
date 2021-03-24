@@ -9,15 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet weak var changeColorButton: UIButton!
+    
     @IBOutlet weak var viewRed: UIView!
     @IBOutlet weak var viewYellow: UIView!
     @IBOutlet weak var viewGreen: UIView!
     
+    // MARK: - Public Properties
     var color: Int = 0
     let faintAlpha: CGFloat = 0.3
     let brightAlpha: CGFloat = 1.0
     
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,6 +35,7 @@ class ViewController: UIViewController {
 //
 //    } хотел применить эту функцию для скругления, но не понял как :(
 
+    // MARK: - IB Actions
     @IBAction func changeColorButton(_ sender: UIButton) {
         changeColorButton.setTitle("Next", for: .normal)
         viewRed.alpha = faintAlpha
